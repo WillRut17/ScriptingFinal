@@ -23,6 +23,11 @@ public class HeavyZomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(this.gameObject.transform.position.z < 0)
+        {
+            this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, 0);
+            Debug.Log("SETTY");
+        }
         if (health <= 0)
         {
             death.pitch = (Random.Range(0.6f, .9f));

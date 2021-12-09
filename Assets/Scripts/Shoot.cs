@@ -50,6 +50,7 @@ public class Shoot : MonoBehaviour
             if (canShoot == true)
             {
                 ammoLeft -= 1;
+                gunSound.pitch = Random.Range(.7f, 1.3f);
                 gunSound.Play();
                 ani.Play("playershoot");
                 if (ammoLeft <= 0)
